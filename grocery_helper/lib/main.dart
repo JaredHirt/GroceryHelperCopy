@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyAppState extends ChangeNotifier {
-  var ingredients = 0;
+  var ingredients = <String>[];
 }
 
 
@@ -104,7 +104,7 @@ var pageIndex = 0;
         onDestinationSelected: (value) {
           setState(() {
             if(value == 0)
-              myAppState.ingredients++;
+              myAppState.ingredients.add('parsley');
             selectedIndex = value;
             pageIndex = value;
           });

@@ -6,6 +6,6 @@ class MyRecipePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
-    return Text('Times Went to Recipe Page');
+    return Text('Recipe Page');
   }
 }
