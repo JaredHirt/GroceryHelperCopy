@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
         title: 'Grocery Helper',
         theme: ThemeData(
           useMaterial3: true,
+
+          //Need to add all of the colors to the colorscheme
           colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.lightGreen,
              primary: const Color.fromRGBO(45, 155, 64, 100),
@@ -31,7 +33,17 @@ class MyApp extends StatelessWidget {
 }
 
 class MyAppState extends ChangeNotifier {
-  var ingredients = <String>[];
+  var shoppingList = <String>[];
+
+
+  //Variables in MyAppState are effectively shared
+  //You should only modify them through these setters, that way it notifies the listeners
+  void addToShoppingList(String s){
+    if(!shoppingList.contains(s)){
+      shoppingList.add(s);
+      notifyListeners();
+    }
+  }
 }
 
 
@@ -45,18 +57,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-
-var pageIndex = 0;
+    //Variable for what page we are on
+    var pageIndex = 0;
+    //Variable for what icon on the navigation bar is selected
     var selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
     var theme = Theme.of(context);
+    // This variable holds the page which is displayed in the middle
     Widget page;
 
     NavigationDestinationLabelBehavior labelBehavior =
         NavigationDestinationLabelBehavior.onlyShowSelected;
+    //Logic between switching between states
     switch(pageIndex) {
       case 0:
         page = MyRecipePage();
@@ -88,7 +103,11 @@ var pageIndex = 0;
             tooltip: 'Settings',
             onPressed: () {
               setState(() {
-                pageIndex = 3;
+                if(pageIndex == 3){
+                  pageIndex = selectedIndex;
+                } else {
+                  pageIndex = 3;
+                }
               });
             },
           ),
@@ -103,10 +122,8 @@ var pageIndex = 0;
         backgroundColor: theme.colorScheme.primary,
         onDestinationSelected: (value) {
           setState(() {
-            if(value == 0)
-              myAppState.ingredients.add('parsley');
-            selectedIndex = value;
-            pageIndex = value;
+              pageIndex = value;
+              selectedIndex = value;
           });
         },
         destinations: const <Widget>[

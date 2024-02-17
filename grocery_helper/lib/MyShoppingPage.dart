@@ -15,8 +15,8 @@ class MyShoppingPage extends StatelessWidget{
               child: Text('Shopping List'),
             ),
           ),
-        for( var ingredient in myAppState.ingredients)
-          ItemOnList(ingredient: ingredient),
+        for( var item in myAppState.shoppingList)
+          ItemOnList(ingredient: item),
       ],
     );
   }

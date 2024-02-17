@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added communication between the different widgets">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added some base shopping list functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" afterDir="false" />
@@ -85,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708133385536</updated>
-      <workItem from="1708140268640" duration="8010000" />
+      <workItem from="1708140268640" duration="9499000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -102,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708154514701</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added some base shopping list functionality">
+      <option name="closed" value="true" />
+      <created>1708155917900</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708155917900</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +119,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created File Structure" />
     <MESSAGE value="Added communication between the different widgets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added communication between the different widgets" />
+    <MESSAGE value="Added some base shopping list functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some base shopping list functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
