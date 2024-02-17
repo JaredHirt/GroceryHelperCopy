@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'MyCalendarPage.dart';
 import 'MyRecipePage.dart';
@@ -11,13 +12,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'Grocery Helper',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.lightGreen,
+             primary: const Color.fromRGBO(45, 155, 64, 100),
+            onPrimary: const Color.fromRGBO(0, 0, 0, 100)
+          )
+        ),
+        home: const MyHomePage(),
+      ),
     );
   }
 }
 
 class MyAppState extends ChangeNotifier {
+  var ingredients = 0;
 }
 
 
@@ -31,14 +45,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  var selectedIndex = 0;
+
+var pageIndex = 0;
+    var selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    var myAppState = context.watch<MyAppState>();
+    var theme = Theme.of(context);
     Widget page;
+
     NavigationDestinationLabelBehavior labelBehavior =
         NavigationDestinationLabelBehavior.onlyShowSelected;
-    switch(selectedIndex) {
+    switch(pageIndex) {
       case 0:
         page = MyRecipePage();
         break;
@@ -48,22 +67,29 @@ class _MyHomePageState extends State<MyHomePage> {
       case 2:
         page = MyShoppingPage();
         break;
+      case 3:
+        //Settings Page
+        page = Placeholder();
       default:
-        throw UnimplementedError('no widget for $selectedIndex');
+        throw UnimplementedError('no widget for $pageIndex');
     }
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Grocery Helper'),
-        backgroundColor: Color.fromRGBO(128, 255, 232, 0.75),
+        centerTitle: true,
+        title: const Text('Grocery Helper',
+        style: TextStyle(fontWeight: FontWeight.bold)),
+        foregroundColor: theme.colorScheme.onPrimary,
+        backgroundColor: theme.colorScheme.primary,
         actions: <Widget>[
           IconButton(
+            color: theme.colorScheme.primary,
             icon: const Icon(Icons.settings),
             tooltip: 'Settings',
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('I clicked on Settings')),
-              );
+              setState(() {
+                pageIndex = 3;
+              });
             },
           ),
         ],
@@ -74,23 +100,29 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: NavigationBar(
         labelBehavior: labelBehavior,
         selectedIndex: selectedIndex,
-        backgroundColor: Color.fromRGBO(246, 226, 127, 0.75),
+        backgroundColor: theme.colorScheme.primary,
         onDestinationSelected: (value) {
           setState(() {
+            if(value == 0)
+              myAppState.ingredients++;
             selectedIndex = value;
+            pageIndex = value;
           });
         },
         destinations: const <Widget>[
           NavigationDestination(
             icon: Icon(Icons.restaurant_menu),
+            selectedIcon: Icon(Icons.restaurant_menu_outlined),
             label: 'Recipes',
           ),
           NavigationDestination(
             icon: Icon(Icons.today),
+            selectedIcon: Icon(Icons.today_outlined),
             label: 'Meal Plan',
           ),
           NavigationDestination(
             icon: Icon(Icons.price_check),
+            selectedIcon: Icon(Icons.price_check_outlined),
             label: 'Shopping Lists',
           ),
         ],
@@ -98,7 +130,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
-
-
