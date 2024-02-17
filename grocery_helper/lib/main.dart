@@ -1,23 +1,57 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const AppBarApp());
+import 'MyCalendarPage.dart';
+import 'MyRecipePage.dart';
+import 'MyShoppingPage.dart';
 
-class AppBarApp extends StatelessWidget {
-  const AppBarApp({Key? key});
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: AppBarExample(),
+      home: MyHomePage(),
     );
   }
 }
 
-class AppBarExample extends StatelessWidget {
-  const AppBarExample({Key? key});
+class MyAppState extends ChangeNotifier {
+}
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key});
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  var selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    Widget page;
+    NavigationDestinationLabelBehavior labelBehavior =
+        NavigationDestinationLabelBehavior.onlyShowSelected;
+    switch(selectedIndex) {
+      case 0:
+        page = MyRecipePage();
+        break;
+      case 1:
+        page = MyCalendarPage();
+        break;
+      case 2:
+        page = MyShoppingPage();
+        break;
+      default:
+        throw UnimplementedError('no widget for $selectedIndex');
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Grocery Helper'),
@@ -35,56 +69,36 @@ class AppBarExample extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('This is the home page', style: TextStyle(fontSize: 24)),
-            const SizedBox(height: 10),
-          ],
-        ),
+        child: page,
       ),
-      bottomNavigationBar: NavigationExample(),
+      bottomNavigationBar: NavigationBar(
+        labelBehavior: labelBehavior,
+        selectedIndex: selectedIndex,
+        backgroundColor: Color.fromRGBO(246, 226, 127, 0.75),
+        onDestinationSelected: (value) {
+          setState(() {
+            selectedIndex = value;
+          });
+        },
+        destinations: const <Widget>[
+          NavigationDestination(
+            icon: Icon(Icons.restaurant_menu),
+            label: 'Recipes',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.today),
+            label: 'Meal Plan',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.price_check),
+            label: 'Shopping Lists',
+          ),
+        ],
+      )
     );
   }
 }
 
-class NavigationExample extends StatefulWidget {
-  const NavigationExample({Key? key});
 
-  @override
-  State<NavigationExample> createState() => _NavigationExampleState();
-}
 
-class _NavigationExampleState extends State<NavigationExample> {
-  int currentPageIndex = 0;
-  NavigationDestinationLabelBehavior labelBehavior =
-      NavigationDestinationLabelBehavior.onlyShowSelected;
 
-  @override
-  Widget build(BuildContext context) {
-    return NavigationBar(
-      labelBehavior: labelBehavior,
-      selectedIndex: currentPageIndex,
-      backgroundColor: Color.fromRGBO(246, 226, 127, 0.75),
-      onDestinationSelected: (int index) {
-        setState(() {
-          currentPageIndex = index;
-        });
-      },
-      destinations: const <Widget>[
-        NavigationDestination(
-          icon: Icon(Icons.restaurant_menu),
-          label: 'Recipes',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.today),
-          label: 'Commute',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.price_check),
-          label: 'Saved',
-        ),
-      ],
-    );
-  }
-}
