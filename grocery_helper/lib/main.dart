@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,7 +9,7 @@ import 'MyShoppingPage.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +19,37 @@ class MyApp extends StatelessWidget {
         title: 'Grocery Helper',
         theme: ThemeData(
           useMaterial3: true,
-
-          //Need to add all of the colors to the colorscheme
           colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.lightGreen,
-             primary: const Color.fromRGBO(45, 155, 64, 100),
-            onPrimary: const Color.fromRGBO(0, 0, 0, 100)
-          )
+            primary: const Color.fromRGBO(45, 155, 64, 100),
+            onPrimary: const Color.fromRGBO(0, 0, 0, 100),
+          ),
         ),
-        home: const MyHomePage(),
+        home: const SplashScreen(),
+      ),
+    );
+  }
+}
+
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key});
+
+  @override
+  Widget build(BuildContext context) {
+    Timer(
+      const Duration(seconds: 4),
+          () {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => const MyHomePage(),
+          ),
+        );
+      },
+    );
+
+    return Scaffold(
+      body: Center(
+        child: Image.asset('assets/grocery_logo.png'), // Replace with your image path
       ),
     );
   }
@@ -35,17 +58,13 @@ class MyApp extends StatelessWidget {
 class MyAppState extends ChangeNotifier {
   var shoppingList = <String>[];
 
-
-  //Variables in MyAppState are effectively shared
-  //You should only modify them through these setters, that way it notifies the listeners
-  void addToShoppingList(String s){
-    if(!shoppingList.contains(s)){
+  void addToShoppingList(String s) {
+    if (!shoppingList.contains(s)) {
       shoppingList.add(s);
       notifyListeners();
     }
   }
 }
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key});
@@ -53,26 +72,20 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-
-
 class _MyHomePageState extends State<MyHomePage> {
-
-    //Variable for what page we are on
-    var pageIndex = 0;
-    //Variable for what icon on the navigation bar is selected
-    var selectedIndex = 0;
+  var pageIndex = 0;
+  var selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
     var theme = Theme.of(context);
-    // This variable holds the page which is displayed in the middle
     Widget page;
 
     NavigationDestinationLabelBehavior labelBehavior =
         NavigationDestinationLabelBehavior.onlyShowSelected;
-    //Logic between switching between states
-    switch(pageIndex) {
+
+    switch (pageIndex) {
       case 0:
         page = MyRecipePage();
         break;
@@ -83,8 +96,8 @@ class _MyHomePageState extends State<MyHomePage> {
         page = MyShoppingPage();
         break;
       case 3:
-        //Settings Page
         page = Placeholder();
+        break;
       default:
         throw UnimplementedError('no widget for $pageIndex');
     }
@@ -92,8 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Grocery Helper',
-        style: TextStyle(fontWeight: FontWeight.bold)),
+        title: const Text('Grocery Helper', style: TextStyle(fontWeight: FontWeight.bold)),
         foregroundColor: theme.colorScheme.onPrimary,
         backgroundColor: theme.colorScheme.primary,
         actions: <Widget>[
@@ -103,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
             tooltip: 'Settings',
             onPressed: () {
               setState(() {
-                if(pageIndex == 3){
+                if (pageIndex == 3) {
                   pageIndex = selectedIndex;
                 } else {
                   pageIndex = 3;
@@ -122,8 +134,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: theme.colorScheme.primary,
         onDestinationSelected: (value) {
           setState(() {
-              pageIndex = value;
-              selectedIndex = value;
+            pageIndex = value;
+            selectedIndex = value;
           });
         },
         destinations: const <Widget>[
@@ -143,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'Shopping Lists',
           ),
         ],
-      )
+      ),
     );
   }
 }
