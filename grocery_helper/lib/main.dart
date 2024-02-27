@@ -1,12 +1,13 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:grocery_helper/recipe.dart';
 import 'package:provider/provider.dart';
 
 import 'MyCalendarPage.dart';
 import 'MyRecipePage.dart';
 import 'MyShoppingPage.dart';
 
-void main() => runApp(const MyApp());
+void main()  => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key});
@@ -57,6 +58,22 @@ class SplashScreen extends StatelessWidget {
 
 class MyAppState extends ChangeNotifier {
   var shoppingList = <String>[];
+  late Recipe currentRecipe;
+
+  MyAppState(){
+    getNextRecipe();
+  }
+
+
+
+
+
+  void getNextRecipe(){
+    fetchRecipe().then( (value) => currentRecipe  = value);
+    notifyListeners();
+  }
+
+
 
   void addToShoppingList(String s) {
     if (!shoppingList.contains(s)) {

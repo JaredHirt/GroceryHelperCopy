@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:english_words/english_words.dart';
-
 import 'main.dart';
+import 'recipe.dart';
 class MyRecipePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,9 @@ class MyRecipePage extends StatelessWidget{
         Text('Recipe Page'),
         ElevatedButton(
             onPressed: () {
-                myAppState.addToShoppingList(WordPair.random().toString());
+                myAppState.addToShoppingList(myAppState.currentRecipe.title);
+                myAppState.getNextRecipe();
+
                 },
             child: Text('Add Random Word To Shopping List')),
       ],
