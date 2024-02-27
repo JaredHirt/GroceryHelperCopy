@@ -15,8 +15,29 @@ class MyRecipePage extends StatelessWidget{
                 myAppState.getNextRecipe();
 
                 },
-            child: Text('Add Random Word To Shopping List')),
+            child: Text('Add Recipe To Shopping List')),
+        RecipeCard(),
       ],
+    );
+  }
+}
+
+class RecipeCard extends StatelessWidget {
+  const RecipeCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    var myAppState = context.watch<MyAppState>();
+    Recipe recipe = myAppState.currentRecipe;
+    return Card(
+      child: Column(
+        children: [
+          Text(recipe.title),
+          Image.network(recipe.thumbnail),
+      ]
+      )
     );
   }
 }

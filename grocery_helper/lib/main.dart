@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key});
 
+
   @override
   Widget build(BuildContext context) {
     Timer(
@@ -59,18 +60,45 @@ class SplashScreen extends StatelessWidget {
 class MyAppState extends ChangeNotifier {
   var shoppingList = <String>[];
   late Recipe currentRecipe;
+  bool isInitialized = false;
+  List<Recipe> recipeList = [];
 
+  int recipeIndex = -1;
   MyAppState(){
+    getFirstRecipe(initializeRecipe());
+  }
+
+  void getFirstRecipe(Future<void> future) async {
+    await future;
     getNextRecipe();
   }
 
+  Future<void> initializeRecipe() async {
+    bool newRecipe = false;
+    while(!newRecipe) {
+      try {
+        await fetchRecipe().then((value) =>  recipeList.add(value));
+        newRecipe = true;
+        notifyListeners();
+      } on FormatException {print("Failed to get Recipe");}
+    }
+  }
 
 
+  void getNextRecipe()  {
+    recipeIndex++;
+    currentRecipe = recipeList[recipeIndex];
+    addRecipesToEndOfList();
+  }
 
+  void addRecipesToEndOfList() async{
+    while(recipeIndex < recipeList.length + 10){
+      try {
+        await fetchRecipe().then((value) =>  recipeList.add(value));
+        notifyListeners();
+      } on FormatException {print("Failed to get Recipe");}
+    }
 
-  void getNextRecipe(){
-    fetchRecipe().then( (value) => currentRecipe  = value);
-    notifyListeners();
   }
 
 
@@ -85,6 +113,7 @@ class MyAppState extends ChangeNotifier {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key});
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }

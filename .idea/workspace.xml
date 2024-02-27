@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added a few comments, and cleaned up the Calendar page, as well as fixed a bug with the navigation bar">
-      <change afterPath="$PROJECT_DIR$/grocery_helper/lib/recipe.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="I have partially implemented the Random Recipes, there's a bug where it sometimes throws an error, working on finding the cause of the bug, but we do have a bit of functionality :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/test/widget_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +92,7 @@
       <workItem from="1708973956200" duration="6321000" />
       <workItem from="1708992261864" duration="4684000" />
       <workItem from="1709055006350" duration="2872000" />
-      <workItem from="1709060785077" duration="2267000" />
+      <workItem from="1709060785077" duration="8608000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -123,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708155917900</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="I have partially implemented the Random Recipes, there's a bug where it sometimes throws an error, working on finding the cause of the bug, but we do have a bit of functionality :)">
+      <option name="closed" value="true" />
+      <created>1709069541303</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709069541303</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +146,8 @@
     <MESSAGE value="Created File Structure" />
     <MESSAGE value="Added communication between the different widgets" />
     <MESSAGE value="Added some base shopping list functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some base shopping list functionality" />
+    <MESSAGE value="I have partially implemented the Random Recipes, there's a bug where it sometimes throws an error, working on finding the cause of the bug, but we do have a bit of functionality :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="I have partially implemented the Random Recipes, there's a bug where it sometimes throws an error, working on finding the cause of the bug, but we do have a bit of functionality :)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
