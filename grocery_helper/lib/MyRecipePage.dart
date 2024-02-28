@@ -45,7 +45,6 @@ class _MyRecipePageState extends State<MyRecipePage> {
             ElevatedButton(
                 onPressed: () {
                     myAppState.addToShoppingList(myAppState.currentRecipe.title);
-                    myAppState.getNextRecipe();
                     },
                 child: const Icon(
                   Icons.favorite
