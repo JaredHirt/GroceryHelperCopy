@@ -38,6 +38,12 @@ import 'package:http/http.dart' as http;
    factory Recipe.fromJson(Map<String, dynamic> json) {
 
       final ingredients = <String>[];
+      for(int i = 1; i <= 20; i++){
+        if(json['strIngredient$i'] != null && json['strIngredient$i'] != '') {
+          ingredients.add(json['strIngredient$i']);
+        }
+      }
+
     return switch (json) {
       {
         'strMeal': String title,

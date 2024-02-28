@@ -14,6 +14,7 @@ class _MyRecipePageState extends State<MyRecipePage> {
 
  List<RecipeCard> recipeCards = [];
  final _controller = PageController();
+ int _page = 0;
 
   void updateRecipeCards(List<Recipe> list){
     for(int i = recipeCards.length; i <= list.length; i++){
@@ -33,9 +34,10 @@ class _MyRecipePageState extends State<MyRecipePage> {
     var myAppState = context.watch<MyAppState>();
     updateRecipeCards(myAppState.recipeList);
 
-
     IconData likeIcon;
-    if(myAppState.savedRecipes.contains(myAppState.currentRecipe)) {
+
+
+      if(myAppState.savedRecipes.contains(myAppState.recipeList[_page])) {
       likeIcon = Icons.favorite;
     }
     else {likeIcon = Icons.favorite_border_outlined;}
@@ -50,6 +52,7 @@ class _MyRecipePageState extends State<MyRecipePage> {
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
                 myAppState.currentRecipe = myAppState.recipeList[index];
+                  _page = index;
                 return recipeCards[index];
             },
             ),
@@ -84,7 +87,7 @@ class RecipeCard extends StatelessWidget {
     ThemeData theme = Theme.of(context);
     Recipe recipe = myAppState.recipeList[index];
     return Scaffold(
-      backgroundColor: theme.colorScheme.secondary,
+      backgroundColor: theme.colorScheme.primary,
 
       body: Center(
         child: Card(
