@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="It's working pretty good, we need to move the splash screen, so it plays while the data is being loaded">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added the preloading for the RecipeCards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
@@ -92,7 +92,7 @@
       <workItem from="1708973956200" duration="6321000" />
       <workItem from="1708992261864" duration="4684000" />
       <workItem from="1709055006350" duration="2872000" />
-      <workItem from="1709060785077" duration="12136000" />
+      <workItem from="1709060785077" duration="13148000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -133,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709075625902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added the preloading for the RecipeCards">
+      <option name="closed" value="true" />
+      <created>1709079187714</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709079187714</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +164,8 @@
     <MESSAGE value="Added some base shopping list functionality" />
     <MESSAGE value="I have partially implemented the Random Recipes, there's a bug where it sometimes throws an error, working on finding the cause of the bug, but we do have a bit of functionality :)" />
     <MESSAGE value="It's working pretty good, we need to move the splash screen, so it plays while the data is being loaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="It's working pretty good, we need to move the splash screen, so it plays while the data is being loaded" />
+    <MESSAGE value="Added the preloading for the RecipeCards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the preloading for the RecipeCards" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

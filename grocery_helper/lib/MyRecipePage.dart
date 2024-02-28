@@ -29,14 +29,35 @@ class _MyRecipePageState extends State<MyRecipePage> {
     return Column(
       children: [
         const Text('Recipe Page'),
-        ElevatedButton(
-            onPressed: () {
-                myAppState.addToShoppingList(myAppState.currentRecipe.title);
-                myAppState.getNextRecipe();
-
-                },
-            child: const Text('Add Recipe To Shopping List')),
         recipeCards[myAppState.recipeIndex],
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                    myAppState.addToShoppingList(myAppState.currentRecipe.title);
+                    myAppState.getPreviousRecipe();
+                    },
+                child: const Icon(
+                  Icons.arrow_back
+                  )
+                  ),
+            ElevatedButton(
+                onPressed: () {
+                    myAppState.addToShoppingList(myAppState.currentRecipe.title);
+                    myAppState.getNextRecipe();
+                    },
+                child: const Icon(
+                  Icons.favorite
+                )),
+            ElevatedButton(
+                onPressed: () {
+                    myAppState.getNextRecipe();
+                    },
+                child: const Icon( Icons.arrow_forward),
+            )
+          ],
+        ),
       ],
     );
   }

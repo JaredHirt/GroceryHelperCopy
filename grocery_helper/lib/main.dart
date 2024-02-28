@@ -66,6 +66,13 @@ class MyAppState extends ChangeNotifier {
     recipeIndex++;
     currentRecipe = recipeList[recipeIndex];
     addRecipesToEndOfList();
+    notifyListeners();
+  }
+  void getPreviousRecipe() {
+    if(recipeIndex > 0) {
+      recipeIndex--;
+    }
+    notifyListeners();
   }
 
   void addRecipesToEndOfList() async{
