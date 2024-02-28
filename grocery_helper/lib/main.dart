@@ -26,32 +26,7 @@ class MyApp extends StatelessWidget {
             onPrimary: const Color.fromRGBO(0, 0, 0, 100),
           ),
         ),
-        home: const SplashScreen(),
-      ),
-    );
-  }
-}
-
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key});
-
-
-  @override
-  Widget build(BuildContext context) {
-    Timer(
-      const Duration(seconds: 4),
-          () {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => const MyHomePage(),
-          ),
-        );
-      },
-    );
-
-    return Scaffold(
-      body: Center(
-        child: Image.asset('assets/grocery_logo.png'), // Replace with your image path
+        home: const MyHomePage(),
       ),
     );
   }
@@ -82,6 +57,8 @@ class MyAppState extends ChangeNotifier {
         notifyListeners();
       } on FormatException {print("Failed to get Recipe");}
     }
+     isInitialized = true;
+    notifyListeners();
   }
 
 
@@ -95,9 +72,10 @@ class MyAppState extends ChangeNotifier {
     while(recipeIndex < recipeList.length + 10){
       try {
         await fetchRecipe().then((value) =>  recipeList.add(value));
-        notifyListeners();
       } on FormatException {print("Failed to get Recipe");}
     }
+
+    notifyListeners();
 
   }
 
@@ -125,6 +103,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
+    if(myAppState.isInitialized == false) {
+      return Scaffold(
+        body: Center(
+          child: Image.asset(
+              'assets/grocery_logo.png'), // Replace with your image path
+        ),
+      );
+    }
     var theme = Theme.of(context);
     Widget page;
 

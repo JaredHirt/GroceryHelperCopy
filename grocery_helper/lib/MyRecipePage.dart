@@ -2,35 +2,57 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'main.dart';
 import 'recipe.dart';
-class MyRecipePage extends StatelessWidget{
+class MyRecipePage extends StatefulWidget{
+  const MyRecipePage({super.key});
+
+  @override
+  State<MyRecipePage> createState() => _MyRecipePageState();
+}
+
+class _MyRecipePageState extends State<MyRecipePage> {
+
+ List<RecipeCard> recipeCards = [];
+
+  void updateRecipeCards(List<Recipe> list){
+    for(int i = recipeCards.length; i <= list.length; i++){
+      recipeCards.add(RecipeCard(index:i));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
+    updateRecipeCards(myAppState.recipeList);
+
+
+
     return Column(
       children: [
-        Text('Recipe Page'),
+        const Text('Recipe Page'),
         ElevatedButton(
             onPressed: () {
                 myAppState.addToShoppingList(myAppState.currentRecipe.title);
                 myAppState.getNextRecipe();
 
                 },
-            child: Text('Add Recipe To Shopping List')),
-        RecipeCard(),
+            child: const Text('Add Recipe To Shopping List')),
+        recipeCards[myAppState.recipeIndex],
       ],
     );
   }
 }
 
 class RecipeCard extends StatelessWidget {
+  final int index;
   const RecipeCard({
     super.key,
+    required this.index,
   });
 
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
-    Recipe recipe = myAppState.currentRecipe;
+    Recipe recipe = myAppState.recipeList[index];
     return Card(
       child: Column(
         children: [
@@ -41,3 +63,5 @@ class RecipeCard extends StatelessWidget {
     );
   }
 }
+
+
