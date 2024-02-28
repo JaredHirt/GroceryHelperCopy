@@ -15,8 +15,8 @@ class MyShoppingPage extends StatelessWidget{
               child: Text('Shopping List'),
             ),
           ),
-        for( var item in myAppState.shoppingList)
-          ItemOnList(ingredient: item),
+        for( var item in myAppState.savedRecipes)
+          ItemOnList(ingredient: item.title),
       ],
     );
   }

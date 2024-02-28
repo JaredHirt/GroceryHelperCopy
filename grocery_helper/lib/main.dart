@@ -33,9 +33,11 @@ class MyApp extends StatelessWidget {
 }
 
 class MyAppState extends ChangeNotifier {
-  var shoppingList = <String>[];
+  var savedRecipes = <Recipe>[];
+
   late Recipe currentRecipe;
   bool isInitialized = false;
+  //Buffer
   List<Recipe> recipeList = [];
 
   int recipeIndex = -1;
@@ -88,11 +90,12 @@ class MyAppState extends ChangeNotifier {
 
 
 
-  void addToShoppingList(String s) {
-    if (!shoppingList.contains(s)) {
-      shoppingList.add(s);
-      notifyListeners();
+  void toggleInSavedRecipes(Recipe r) {
+    if (!savedRecipes.contains(r)) {
+      savedRecipes.add(r);
     }
+    else savedRecipes.remove(r);
+      notifyListeners();
   }
 }
 

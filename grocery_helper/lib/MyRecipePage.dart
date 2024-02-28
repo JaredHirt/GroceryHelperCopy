@@ -23,6 +23,10 @@ class _MyRecipePageState extends State<MyRecipePage> {
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
     updateRecipeCards(myAppState.recipeList);
+    IconData likeIcon;
+    if(myAppState.savedRecipes.contains(myAppState.currentRecipe))
+      likeIcon = Icons.favorite;
+    else likeIcon = Icons.favorite_border_outlined;
 
 
 
@@ -35,7 +39,6 @@ class _MyRecipePageState extends State<MyRecipePage> {
           children: [
             ElevatedButton(
                 onPressed: () {
-                    myAppState.addToShoppingList(myAppState.currentRecipe.title);
                     myAppState.getPreviousRecipe();
                     },
                 child: const Icon(
@@ -44,10 +47,10 @@ class _MyRecipePageState extends State<MyRecipePage> {
                   ),
             ElevatedButton(
                 onPressed: () {
-                    myAppState.addToShoppingList(myAppState.currentRecipe.title);
+                    myAppState.toggleInSavedRecipes(myAppState.currentRecipe);
                     },
-                child: const Icon(
-                  Icons.favorite
+                child:  Icon(
+                  likeIcon,
                 )),
             ElevatedButton(
                 onPressed: () {
