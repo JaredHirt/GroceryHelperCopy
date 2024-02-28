@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'main.dart';
@@ -12,6 +13,7 @@ class MyRecipePage extends StatefulWidget{
 class _MyRecipePageState extends State<MyRecipePage> {
 
  List<RecipeCard> recipeCards = [];
+ final _controller = PageController();
 
   void updateRecipeCards(List<Recipe> list){
     for(int i = recipeCards.length; i <= list.length; i++){
@@ -20,47 +22,51 @@ class _MyRecipePageState extends State<MyRecipePage> {
   }
 
   @override
+  void initState(){
+    super.initState();
+    _controller.addListener(() => setState(() {
+    }));
+  }
+
+  @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
     updateRecipeCards(myAppState.recipeList);
+
+
     IconData likeIcon;
-    if(myAppState.savedRecipes.contains(myAppState.currentRecipe))
+    if(myAppState.savedRecipes.contains(myAppState.currentRecipe)) {
       likeIcon = Icons.favorite;
-    else likeIcon = Icons.favorite_border_outlined;
+    }
+    else {likeIcon = Icons.favorite_border_outlined;}
 
 
-
-    return Column(
-      children: [
-        const Text('Recipe Page'),
-        recipeCards[myAppState.recipeIndex],
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+    return Scaffold(
+        body: Stack(
           children: [
-            ElevatedButton(
-                onPressed: () {
-                    myAppState.getPreviousRecipe();
-                    },
-                child: const Icon(
-                  Icons.arrow_back
-                  )
-                  ),
-            ElevatedButton(
+            PageView.builder(
+              key: const PageStorageKey('RecipeFinder'),
+              controller: _controller,
+            scrollDirection: Axis.vertical,
+            itemBuilder: (BuildContext context, int index) {
+                myAppState.currentRecipe = myAppState.recipeList[index];
+                return recipeCards[index];
+            },
+            ),
+        Align(
+          alignment: Alignment.bottomRight,
+            child: ElevatedButton(
                 onPressed: () {
                     myAppState.toggleInSavedRecipes(myAppState.currentRecipe);
                     },
                 child:  Icon(
                   likeIcon,
-                )),
-            ElevatedButton(
-                onPressed: () {
-                    myAppState.getNextRecipe();
-                    },
-                child: const Icon( Icons.arrow_forward),
+
+                )
             )
+            ),
           ],
         ),
-      ],
     );
   }
 }
@@ -75,14 +81,25 @@ class RecipeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
+    ThemeData theme = Theme.of(context);
     Recipe recipe = myAppState.recipeList[index];
-    return Card(
-      child: Column(
-        children: [
-          Text(recipe.title),
-          Image.network(recipe.thumbnail),
-      ]
+    return Scaffold(
+      backgroundColor: theme.colorScheme.secondary,
+
+      body: Center(
+        child: Card(
+        child: Column(
+          children: [
+            Text(recipe.title),
+            CachedNetworkImage(
+              imageUrl: recipe.thumbnail,
+            ),
+
+        ]
+        )
+            ),
       )
+
     );
   }
 }

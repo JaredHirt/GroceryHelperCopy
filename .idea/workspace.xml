@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Made the favourite not go down the list">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Cleaned up, and allowed for toggleable favorites">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,7 @@
       <workItem from="1708973956200" duration="6321000" />
       <workItem from="1708992261864" duration="4684000" />
       <workItem from="1709055006350" duration="2872000" />
-      <workItem from="1709060785077" duration="14189000" />
+      <workItem from="1709060785077" duration="20426000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -158,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709080437068</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Cleaned up, and allowed for toggleable favorites">
+      <option name="closed" value="true" />
+      <created>1709081396316</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709081396316</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +194,8 @@
     <MESSAGE value="Added the preloading for the RecipeCards" />
     <MESSAGE value="Added The feature to move between recipes without adding to the list" />
     <MESSAGE value="Made the favourite not go down the list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the favourite not go down the list" />
+    <MESSAGE value="Cleaned up, and allowed for toggleable favorites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up, and allowed for toggleable favorites" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
