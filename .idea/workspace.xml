@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added TikTok Scrolling">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-02-20_3_15_p_m__[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-02-20_3_15_p_m___Changes_.xml" beforeDir="false" />
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added Ingredients!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/recipe.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/recipe.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +91,8 @@
       <workItem from="1708992261864" duration="4684000" />
       <workItem from="1709055006350" duration="2872000" />
       <workItem from="1709060785077" duration="23375000" />
-      <workItem from="1709150532014" duration="804000" />
+      <workItem from="1709150532014" duration="1098000" />
+      <workItem from="1709229496900" duration="718000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -176,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709104748257</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added Ingredients!">
+      <option name="closed" value="true" />
+      <created>1709159780694</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709159780694</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +209,8 @@
     <MESSAGE value="Made the favourite not go down the list" />
     <MESSAGE value="Cleaned up, and allowed for toggleable favorites" />
     <MESSAGE value="Added TikTok Scrolling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TikTok Scrolling" />
+    <MESSAGE value="Added Ingredients!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Ingredients!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
