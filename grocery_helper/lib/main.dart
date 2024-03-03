@@ -35,7 +35,6 @@ class MyApp extends StatelessWidget {
 class MyAppState extends ChangeNotifier {
   var savedRecipes = <Recipe>[];
 
-  late Recipe currentRecipe;
   bool isInitialized = false;
   //Buffer
   List<Recipe> recipeList = [];
@@ -66,7 +65,6 @@ class MyAppState extends ChangeNotifier {
 
   void getNextRecipe()  {
     recipeIndex++;
-    currentRecipe = recipeList[recipeIndex];
     addRecipesToEndOfList();
     notifyListeners();
   }

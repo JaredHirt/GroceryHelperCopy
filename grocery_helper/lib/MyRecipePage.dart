@@ -14,7 +14,6 @@ class _MyRecipePageState extends State<MyRecipePage> {
 
  List<RecipeCard> recipeCards = [];
  final _controller = PageController();
- int _page = 0;
 
   void updateRecipeCards(List<Recipe> list){
     for(int i = recipeCards.length; i <= list.length; i++){
@@ -34,13 +33,7 @@ class _MyRecipePageState extends State<MyRecipePage> {
     var myAppState = context.watch<MyAppState>();
     updateRecipeCards(myAppState.recipeList);
 
-    IconData likeIcon;
 
-
-      if(myAppState.savedRecipes.contains(myAppState.recipeList[_page])) {
-      likeIcon = Icons.favorite;
-    }
-    else {likeIcon = Icons.favorite_border_outlined;}
 
 
     return Scaffold(
@@ -51,23 +44,10 @@ class _MyRecipePageState extends State<MyRecipePage> {
               controller: _controller,
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
-                myAppState.currentRecipe = myAppState.recipeList[index];
-                  _page = index;
                 return recipeCards[index];
             },
             ),
-        Align(
-          alignment: Alignment.bottomRight,
-            child: ElevatedButton(
-                onPressed: () {
-                    myAppState.toggleInSavedRecipes(myAppState.currentRecipe);
-                    },
-                child:  Icon(
-                  likeIcon,
 
-                )
-            )
-            ),
           ],
         ),
     );
@@ -84,25 +64,48 @@ class RecipeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
+
+
+
+
     ThemeData theme = Theme.of(context);
     Recipe recipe = myAppState.recipeList[index];
+
+
+
+    IconData likeIcon = Icons.favorite_border_outlined;
+    if(myAppState.savedRecipes.contains(recipe)){
+      likeIcon = Icons.favorite;
+    }
     return Scaffold(
       backgroundColor: theme.colorScheme.primary,
-
       body: Center(
-        child: Card(
-        child: Column(
+        child: Stack(
           children: [
-            Text(recipe.title),
-            CachedNetworkImage(
-              imageUrl: recipe.thumbnail,
+            Card(
+                child: Column(
+                children: [
+                Text(recipe.title),
+                CachedNetworkImage(
+                imageUrl: recipe.thumbnail,
+                ),
+                ]
+              )
             ),
-
-        ]
-        )
+            Align(
+              alignment: Alignment.bottomRight,
+              child: ElevatedButton(
+                  onPressed: () {
+                    myAppState.toggleInSavedRecipes(myAppState.recipeList[index]);
+                  },
+                  child:  Icon(
+                    likeIcon,
+                  )
+              )
             ),
+          ]
+        ),
       )
-
     );
   }
 }
