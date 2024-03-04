@@ -40,6 +40,7 @@ class MyAppState extends ChangeNotifier {
   List<ItemOnList> ingredients = [] ;
 
 
+
   void addToShoppingList(List<Recipe> list){
     for(var rec in list){
       for(var item in rec.ingredients){
@@ -48,6 +49,21 @@ class MyAppState extends ChangeNotifier {
         }
       }
     }
+
+
+    List<ItemOnList> itemsToRemove = [];
+    for(ItemOnList i in ingredients){
+      if(!ingredientUsedInSavedRecipe(i.ingredient)){
+        itemsToRemove.add(i);
+      }
+    }
+
+    for(ItemOnList item in itemsToRemove){
+      ingredients.remove(item);
+    }
+
+
+
     ingredients.sort( (a,b) => a.getString().compareTo(b.getString()));
   }
 
@@ -55,6 +71,17 @@ class MyAppState extends ChangeNotifier {
     for(var i in ingredients) {
       if(i.getString() == s) {
         return true;
+      }
+    }
+    return false;
+  }
+
+  bool ingredientUsedInSavedRecipe(String s){
+    for(Recipe rec in savedRecipes){
+      for(String ing in rec.ingredients){
+        if(s == ing){
+          return true;
+        }
       }
     }
     return false;

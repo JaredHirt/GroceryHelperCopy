@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed Center Alignment of Recipe Card">
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709498606510</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed Center Alignment of Recipe Card">
+      <option name="closed" value="true" />
+      <created>1709524789886</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709524789886</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +226,8 @@
     <MESSAGE value="Added TikTok Scrolling" />
     <MESSAGE value="Added Ingredients!" />
     <MESSAGE value="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code" />
+    <MESSAGE value="Fixed Center Alignment of Recipe Card" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Center Alignment of Recipe Card" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
