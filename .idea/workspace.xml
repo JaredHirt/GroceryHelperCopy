@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

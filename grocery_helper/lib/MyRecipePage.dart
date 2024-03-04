@@ -80,15 +80,18 @@ class RecipeCard extends StatelessWidget {
       body: Center(
         child: Stack(
           children: [
-            Card(
-                child: Column(
-                children: [
-                Text(recipe.title),
-                CachedNetworkImage(
-                imageUrl: recipe.thumbnail,
-                ),
-                ]
-              )
+            Align(
+              alignment: Alignment.center,
+              child: Card(
+                  child: Column(
+                  children: [
+                  Text(recipe.title),
+                  CachedNetworkImage(
+                  imageUrl: recipe.thumbnail,
+                  ),
+                  ]
+                )
+              ),
             ),
             Align(
               alignment: Alignment.bottomRight,
