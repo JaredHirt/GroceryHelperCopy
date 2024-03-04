@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added Ingredients!">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709159780694</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code">
+      <created>1709498606510</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709498606510</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +220,8 @@
     <MESSAGE value="Cleaned up, and allowed for toggleable favorites" />
     <MESSAGE value="Added TikTok Scrolling" />
     <MESSAGE value="Added Ingredients!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Ingredients!" />
+    <MESSAGE value="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

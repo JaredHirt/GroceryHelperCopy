@@ -35,6 +35,33 @@ class MyApp extends StatelessWidget {
 class MyAppState extends ChangeNotifier {
   var savedRecipes = <Recipe>[];
 
+
+  //Shopping List Stuff
+  List<ItemOnList> ingredients = [] ;
+
+
+  void addToShoppingList(List<Recipe> list){
+    for(var rec in list){
+      for(var item in rec.ingredients){
+        if(!containsIngredient(item)){
+          ingredients.add(ItemOnList(ingredient:item, value:false));
+        }
+      }
+    }
+    ingredients.sort( (a,b) => a.getString().compareTo(b.getString()));
+  }
+
+  bool containsIngredient(String s){
+    for(var i in ingredients) {
+      if(i.getString() == s) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  //end of Shopping List Stuff
+
   bool isInitialized = false;
   //Buffer
   List<Recipe> recipeList = [];
@@ -92,7 +119,9 @@ class MyAppState extends ChangeNotifier {
     if (!savedRecipes.contains(r)) {
       savedRecipes.add(r);
     }
-    else savedRecipes.remove(r);
+    else {
+      savedRecipes.remove(r);
+    }
       notifyListeners();
   }
 }
@@ -127,16 +156,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
     switch (pageIndex) {
       case 0:
-        page = MyRecipePage();
+        page = const MyRecipePage();
         break;
       case 1:
         page = MyCalendarPage();
         break;
       case 2:
-        page = MyShoppingPage();
+        page = const MyShoppingPage();
         break;
       case 3:
-        page = Placeholder();
+        page = const Placeholder();
         break;
       default:
         throw UnimplementedError('no widget for $pageIndex');

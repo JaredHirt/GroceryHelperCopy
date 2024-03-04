@@ -63,20 +63,18 @@ class RecipeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
     var myAppState = context.watch<MyAppState>();
-
-
-
-
     ThemeData theme = Theme.of(context);
     Recipe recipe = myAppState.recipeList[index];
-
-
-
     IconData likeIcon = Icons.favorite_border_outlined;
     if(myAppState.savedRecipes.contains(recipe)){
       likeIcon = Icons.favorite;
     }
+
+
+
     return Scaffold(
       backgroundColor: theme.colorScheme.primary,
       body: Center(
