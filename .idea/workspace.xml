@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed Center Alignment of Recipe Card">
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Made it so that if you unlike a recipe, the ingredients are removed from the shopping list">
+      <change beforePath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyCalendarPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +78,7 @@
       <recent name="$PROJECT_DIR$/grocery_helper/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jared\OneDrive - UNBC\Academic Year 2023\Janurary Semester 2024\CPSC 222\Final_Project\GroceryHelper\grocery_helper\lib" />
       <recent name="$PROJECT_DIR$/.idea/src" />
     </key>
   </component>
@@ -93,6 +99,12 @@
       <workItem from="1709060785077" duration="23375000" />
       <workItem from="1709150532014" duration="1098000" />
       <workItem from="1709229496900" duration="718000" />
+      <workItem from="1709585970510" duration="46000" />
+      <workItem from="1709589683019" duration="263000" />
+      <workItem from="1709661663428" duration="919000" />
+      <workItem from="1709837774118" duration="1173000" />
+      <workItem from="1709873705179" duration="1073000" />
+      <workItem from="1709935646258" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -196,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709524789886</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Made it so that if you unlike a recipe, the ingredients are removed from the shopping list">
+      <option name="closed" value="true" />
+      <created>1709526687135</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709526687135</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +247,8 @@
     <MESSAGE value="Added Ingredients!" />
     <MESSAGE value="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code" />
     <MESSAGE value="Fixed Center Alignment of Recipe Card" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Center Alignment of Recipe Card" />
+    <MESSAGE value="Made it so that if you unlike a recipe, the ingredients are removed from the shopping list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made it so that if you unlike a recipe, the ingredients are removed from the shopping list" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
