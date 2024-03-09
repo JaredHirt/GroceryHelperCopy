@@ -35,15 +35,30 @@ class MyApp extends StatelessWidget {
 
 class MyAppState extends ChangeNotifier {
   var savedRecipes = <Recipe>[];
-  Map<String, List<Recipe>> recipesForDay = HashMap();
 
 
   //Calendar Stuff
   String selectedDay = "";
 
+  Map<String, List<Recipe>> recipesForDay = HashMap();
+
   void setSelectedDay(String day){
     selectedDay = day;
     notifyListeners();
+  }
+
+  List<Recipe> getRecipesForDay(String day){
+    if(recipesForDay[day] == null){
+      return [];
+    }
+    return recipesForDay[day]!;
+  }
+
+  void addRecipeToDay(String day, Recipe rec){
+    if(recipesForDay[day] == null){
+      recipesForDay[day] = [];
+    }
+    recipesForDay[day]!.add(rec);
   }
 
 

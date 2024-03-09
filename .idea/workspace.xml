@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed issues with the pubspec.yaml and moved the calendar page to the correct package">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Modified the Calendar page to actually select the days, and added a nested ListView">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
@@ -101,7 +101,7 @@
       <workItem from="1709661663428" duration="919000" />
       <workItem from="1709837774118" duration="1173000" />
       <workItem from="1709873705179" duration="1073000" />
-      <workItem from="1709935646258" duration="6633000" />
+      <workItem from="1709935646258" duration="8063000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -221,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709938877562</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Modified the Calendar page to actually select the days, and added a nested ListView">
+      <option name="closed" value="true" />
+      <created>1709945618893</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709945618893</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +262,8 @@
     <MESSAGE value="Fixed Center Alignment of Recipe Card" />
     <MESSAGE value="Made it so that if you unlike a recipe, the ingredients are removed from the shopping list" />
     <MESSAGE value="Fixed issues with the pubspec.yaml and moved the calendar page to the correct package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with the pubspec.yaml and moved the calendar page to the correct package" />
+    <MESSAGE value="Modified the Calendar page to actually select the days, and added a nested ListView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified the Calendar page to actually select the days, and added a nested ListView" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

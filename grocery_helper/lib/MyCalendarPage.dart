@@ -65,8 +65,9 @@ class _MyCalendarPageState extends State<MyCalendarPage> {
     Widget build(BuildContext context) {
       var myAppState = context.watch<MyAppState>();
       ThemeData theme = Theme.of(context);
-      myAppState.setSelectedDay(DateFormat('EEEE, MMMM d, y').format(
+      myAppState.selectedDay = (DateFormat('EEEE, MMMM d, y').format(
                     selectedDateTime.toDateTime()));
+
       return Column(
         children: [
           TimelineCalendar(
@@ -130,12 +131,16 @@ class DayPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
     var ingredients = myAppState.ingredients;
-
-    myAppState.addToShoppingList(myAppState.savedRecipes);
-    return ListView.builder(
-    shrinkWrap: true,
-    physics: const ClampingScrollPhysics(),
-    itemCount: ingredients.length,
-    itemBuilder: (context, index) => ingredients[index]);
+    return ListView(
+      children:[
+        ListView.builder(
+      shrinkWrap: true,
+      physics: const ClampingScrollPhysics(),
+      itemCount: ingredients.length,
+      itemBuilder: (context, index) => ingredients[index]
+    ),
+        Text("Replace Me With Recipe Select Button")
+    ],
+    );
   }
 }
