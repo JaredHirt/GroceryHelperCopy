@@ -34,87 +34,108 @@ import 'package:flutter_timeline_calendar/timeline/widget/select_month.dart';
 import 'package:flutter_timeline_calendar/timeline/widget/select_year.dart';
 import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      home: MyCalendarPage(),
-    ),
-  );
-}
+import 'main.dart';
 
 
-class MyAppState extends ChangeNotifier {
-  String _selectedDayText = "";
-
-  String get selectedDayText => _selectedDayText;
-
-  void updateSelectedDay(String newSelectedDay) {
-    _selectedDayText = newSelectedDay;
-    notifyListeners();
-  }
-}
-
-class MyCalendarPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<MyAppState>(create: (_) => MyAppState()),
-        // Add other providers if needed
-      ],
-      child: _MyCalendarPage(),
-    );
-  }
-}
-
-class _MyCalendarPage extends StatefulWidget {
+class MyCalendarPage extends StatefulWidget {
   @override
   _MyCalendarPageState createState() => _MyCalendarPageState();
 }
 
-class _MyCalendarPageState extends State<_MyCalendarPage> {
+class _MyCalendarPageState extends State<MyCalendarPage> {
+  late CalendarDateTime selectedDateTime;
+  late DateTime? weekStart;
+  late DateTime? weekEnd;
+  @override
+  void initState() {
+    super.initState();
+    TimelineCalendar.calendarProvider = createInstance();
+    selectedDateTime = TimelineCalendar.calendarProvider.getDateTime();
+    getLatestWeek();
+  }
+
+  getLatestWeek() {
+    setState(() {
+      weekStart = selectedDateTime.toDateTime().findFirstDateOfTheWeek();
+      weekEnd = selectedDateTime.toDateTime().findLastDateOfTheWeek();
+    });
+  }
+
+    @override
+    Widget build(BuildContext context) {
+      var myAppState = context.watch<MyAppState>();
+      ThemeData theme = Theme.of(context);
+      myAppState.setSelectedDay(DateFormat('EEEE, MMMM d, y').format(
+                    selectedDateTime.toDateTime()));
+      return Column(
+        children: [
+          TimelineCalendar(
+            calendarType: CalendarType.GREGORIAN,
+            calendarLanguage: "en",
+            calendarOptions: CalendarOptions(
+              viewType: ViewType.DAILY,
+              toggleViewType: false,
+              headerMonthElevation: 10,
+              headerMonthShadowColor: Colors.black26,
+              headerMonthBackColor: Colors.transparent,
+            ),
+            dayOptions: DayOptions(
+              compactMode: true,
+              weekDaySelectedColor: theme.colorScheme.primary,
+              todayBackgroundColor: theme.colorScheme.primary,
+              todayTextColor: theme.colorScheme.primary,
+              selectedBackgroundColor: theme.colorScheme.primary,
+              disableDaysBeforeNow: false,
+            ),
+            headerOptions: HeaderOptions(
+              weekDayStringType: WeekDayStringTypes.SHORT,
+              monthStringType: MonthStringTypes.FULL,
+              calendarIconColor: theme.colorScheme.primary,
+              backgroundColor: theme.colorScheme.primary,
+              headerTextColor: Colors.black,
+            ),
+          onChangeDateTime: (datetime) {
+                String selectedDayText = DateFormat('EEEE, MMMM d, y').format(
+                    datetime.toDateTime());
+                myAppState.setSelectedDay(selectedDayText);
+                selectedDateTime = datetime;
+                getLatestWeek();
+            },
+        onDateTimeReset: (resetDateTime) {
+          selectedDateTime = resetDateTime;
+          getLatestWeek();
+        },
+        onMonthChanged: (monthDateTime) {
+          selectedDateTime = monthDateTime;
+          getLatestWeek();
+        },
+        onYearChanged: (yearDateTime) {
+          selectedDateTime = yearDateTime;
+          getLatestWeek();
+        },
+      dateTime: selectedDateTime,
+          ),
+          Expanded(child:DayPage()),
+        ],
+      );
+    }
+  }
+
+class DayPage extends StatelessWidget {
+  const DayPage({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
+    var ingredients = myAppState.ingredients;
 
-    return Column(
-      children: [
-        TimelineCalendar(
-          calendarType: CalendarType.GREGORIAN,
-          calendarLanguage: "en",
-          calendarOptions: CalendarOptions(
-            viewType: ViewType.DAILY,
-            toggleViewType: false,
-            headerMonthElevation: 10,
-            headerMonthShadowColor: Colors.black26,
-            headerMonthBackColor: Colors.transparent,
-          ),
-          dayOptions: DayOptions(
-            compactMode: true,
-            weekDaySelectedColor: const Color(0xff3AC3E2),
-            disableDaysBeforeNow: true,
-          ),
-          headerOptions: HeaderOptions(
-            weekDayStringType: WeekDayStringTypes.SHORT,
-            monthStringType: MonthStringTypes.FULL,
-            backgroundColor: const Color(0xff3AC3E2),
-            headerTextColor: Colors.black,
-          ),
-          onChangeDateTime: (datetime) {
-            String selectedDayText = DateFormat('EEEE, MMMM d, y').format(datetime.toDateTime());
-            myAppState.updateSelectedDay(selectedDayText);
-          },
-        ),
-        SizedBox(height: 10),
-        Consumer<MyAppState>(
-          builder: (context, myAppState, child) {
-            return Text(
-              myAppState.selectedDayText,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            );
-          },
-        ),
-      ],
-    );
+    myAppState.addToShoppingList(myAppState.savedRecipes);
+    return ListView.builder(
+    shrinkWrap: true,
+    physics: const ClampingScrollPhysics(),
+    itemCount: ingredients.length,
+    itemBuilder: (context, index) => ingredients[index]);
   }
 }

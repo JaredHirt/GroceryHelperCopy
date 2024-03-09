@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:grocery_helper/recipe.dart';
 import 'package:provider/provider.dart';
@@ -34,6 +35,16 @@ class MyApp extends StatelessWidget {
 
 class MyAppState extends ChangeNotifier {
   var savedRecipes = <Recipe>[];
+  Map<String, List<Recipe>> recipesForDay = HashMap();
+
+
+  //Calendar Stuff
+  String selectedDay = "";
+
+  void setSelectedDay(String day){
+    selectedDay = day;
+    notifyListeners();
+  }
 
 
   //Shopping List Stuff

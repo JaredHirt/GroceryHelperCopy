@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Made it so that if you unlike a recipe, the ingredients are removed from the shopping list">
-      <change beforePath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" afterDir="false" />
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed issues with the pubspec.yaml and moved the calendar page to the correct package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyCalendarPage.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +101,7 @@
       <workItem from="1709661663428" duration="919000" />
       <workItem from="1709837774118" duration="1173000" />
       <workItem from="1709873705179" duration="1073000" />
-      <workItem from="1709935646258" duration="637000" />
+      <workItem from="1709935646258" duration="6633000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -216,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709526687135</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fixed issues with the pubspec.yaml and moved the calendar page to the correct package">
+      <option name="closed" value="true" />
+      <created>1709938877562</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709938877562</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +253,8 @@
     <MESSAGE value="Fixed the bug where the liked recipe wasn't the recipe in the center view, as well as cleaned up some old legacy code" />
     <MESSAGE value="Fixed Center Alignment of Recipe Card" />
     <MESSAGE value="Made it so that if you unlike a recipe, the ingredients are removed from the shopping list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made it so that if you unlike a recipe, the ingredients are removed from the shopping list" />
+    <MESSAGE value="Fixed issues with the pubspec.yaml and moved the calendar page to the correct package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with the pubspec.yaml and moved the calendar page to the correct package" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
