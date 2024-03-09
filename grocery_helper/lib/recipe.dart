@@ -4,9 +4,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
    class Recipe{
      final List<String> ingredients;
+     final List<String> measures;
      final String title;
      final String category;
-     final String instructions;
+     final List<String> instructions;
      final String id;
      final String thumbnail;
      final String tags;
@@ -18,6 +19,7 @@ import 'package:http/http.dart' as http;
 
       const Recipe({
        required this.ingredients,
+        required this.measures,
        required this.title,
        required this.category,
        required this.instructions,
@@ -38,24 +40,30 @@ import 'package:http/http.dart' as http;
    factory Recipe.fromJson(Map<String, dynamic> json) {
 
       final ingredients = <String>[];
+      final measures = <String>[];
+      final instructions;
       for(int i = 1; i <= 20; i++){
         if(json['strIngredient$i'] != null && json['strIngredient$i'] != '') {
           ingredients.add(json['strIngredient$i']);
+          measures.add(json['strMeasure$i']);
         }
       }
+      instructions = json['strInstructions'].toString().split('\r\n');
 
     return switch (json) {
       {
         'strMeal': String title,
       'idMeal': String id,
       'strCategory': String category,
-      'strInstructions': String instructions,
       'strMealThumb': String thumbnail,
       'strTags': String tags,
 
       } =>
+      
+      
         Recipe(
           ingredients: ingredients,
+          measures: measures,
           title: title,
           category: category,
           instructions: instructions,

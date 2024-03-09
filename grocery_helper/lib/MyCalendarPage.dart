@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -161,6 +162,33 @@ class DetailedRecipeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(recipe.title);
+    return Center(
+        child: Card(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Text(recipe.title),
+                  CachedNetworkImage(
+                  imageUrl: recipe.thumbnail,
+                  ),
+                  Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child:Column(
+                    children: [
+                  for(int i = 0; i < recipe.ingredients.length; i++)
+                    if(recipe.ingredients[i] != null)
+                      Text("${recipe.measures[i]} ${recipe.ingredients[i]}"),
+          ],
+        ),
+              ),
+                  for(int i = 0; i < recipe.instructions.length; i++)
+                    Align(
+                      alignment: Alignment.centerLeft,
+                        child: Text((i+1).toString() + ". " + recipe.instructions[i] + "\n")),
+
+                ],
+              ),
+            )));
   }
 }
