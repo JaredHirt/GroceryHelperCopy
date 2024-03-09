@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -140,36 +141,68 @@ class DayPage extends StatelessWidget {
       itemCount: myAppState.getRecipesForDay(myAppState.selectedDay).length,
       itemBuilder: (context, index) => DetailedRecipeCard(recipe:myAppState.getRecipesForDay(myAppState.selectedDay)[index])
     ),
-        ElevatedButton(onPressed: (){
-          showModalBottomSheet(
-          context: context,
-          builder: (BuildContext context) {
-            return ListView.builder(
-              itemCount: myAppState.savedRecipes.length,
-              itemBuilder: (context, index){
-                Recipe recipe = myAppState.savedRecipes[index];
-                return ListTile(
-                  title: Text(recipe.title),
-                  onTap: () {
-                    myAppState.addRecipeToDay(
-                      myAppState.selectedDay,
-                      recipe,
-                    );
-                    myAppState.toggleInSavedRecipes(recipe);
-                    Navigator.of(context).pop();
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: ElevatedButton(onPressed: (){
+                  showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return ListView.builder(
+                      itemCount: myAppState.savedRecipes.length,
+                      itemBuilder: (context, index){
+                        Recipe recipe = myAppState.savedRecipes[index];
+                        return ListTile(
+                          title: Text(recipe.title),
+                          onTap: () {
+                            myAppState.addRecipeToDay(
+                              myAppState.selectedDay,
+                              recipe,
+                            );
+                            myAppState.toggleInSavedRecipes(recipe);
+                            Navigator.of(context).pop();
+                          },
+                        );
+                      },
+                  );
                   },
-                );
-              },
-          );
-          },
-          );
-        }, child: Text("Add Recipes"))
+                  );
+                }, child: Text("Saved")),
+              ),
+               Expanded(
+                 child: ElevatedButton(onPressed: (){
+                  showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return ListView.builder(
+                      itemCount: myAppState.favouritedRecipes.length,
+                      itemBuilder: (context, index){
+                        Recipe recipe = myAppState.favouritedRecipes[index];
+                        return ListTile(
+                          title: Text(recipe.title),
+                          onTap: () {
+                            myAppState.addRecipeToDay(
+                              myAppState.selectedDay,
+                              recipe,
+                            );
+                            Navigator.of(context).pop();
+                          },
+                        );
+                      },
+                  );
+                  },
+                  );
+                               }, child: Text("Favorite")),
+               ),
+            ],
+          ),
     ],
     );
   }
 }
 
-class DetailedRecipeCard extends StatelessWidget {
+class DetailedRecipeCard extends StatefulWidget {
   const DetailedRecipeCard({
     super.key,
     required this.recipe,
@@ -177,33 +210,59 @@ class DetailedRecipeCard extends StatelessWidget {
 
   final Recipe recipe;
 
+  @override
+  State<DetailedRecipeCard> createState() => _DetailedRecipeCardState();
+}
 
+class _DetailedRecipeCardState extends State<DetailedRecipeCard> {
   @override
   Widget build(BuildContext context) {
+   var myAppState = context.watch<MyAppState>();
+   IconData icon = Icons.star_border;
+   if(myAppState.favouritedRecipes.contains(widget.recipe)){
+     icon = Icons.star;
+   }
     return Center(
         child: Card(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Text(recipe.title),
+                  Row(
+                    children: [
+                      Expanded(child: Text(widget.recipe.title)),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: ElevatedButton(
+                            onPressed: (){
+                                setState(() {
+                                  myAppState.toggleInFavouritedRecipes(widget.recipe);
+                                  print(myAppState.favouritedRecipes);
+                                            });
+                              },
+                            child: Icon(
+                          icon,
+                        )),
+                      )
+                    ],
+                  ),
                   CachedNetworkImage(
-                  imageUrl: recipe.thumbnail,
+                  imageUrl: widget.recipe.thumbnail,
                   ),
                   Padding(
                   padding: const EdgeInsets.all(8.0),
                   child:Column(
                     children: [
-                  for(int i = 0; i < recipe.ingredients.length; i++)
-                    if(recipe.ingredients[i] != null)
-                      Text("${recipe.measures[i]} ${recipe.ingredients[i]}"),
+                  for(int i = 0; i < widget.recipe.ingredients.length; i++)
+                    if(widget.recipe.ingredients[i] != null)
+                      Text("${widget.recipe.measures[i]} ${widget.recipe.ingredients[i]}"),
           ],
         ),
               ),
-                  for(int i = 0; i < recipe.instructions.length; i++)
+                  for(int i = 0; i < widget.recipe.instructions.length; i++)
                     Align(
                       alignment: Alignment.centerLeft,
-                        child: Text((i+1).toString() + ". " + recipe.instructions[i] + "\n")),
+                        child: Text((i+1).toString() + ". " + widget.recipe.instructions[i] + "\n")),
 
                 ],
               ),

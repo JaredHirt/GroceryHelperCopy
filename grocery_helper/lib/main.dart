@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
 
 class MyAppState extends ChangeNotifier {
   var savedRecipes = <Recipe>[];
+   var favouritedRecipes = <Recipe>[];
 
 
   //Calendar Stuff
@@ -189,7 +190,23 @@ class MyAppState extends ChangeNotifier {
     }
       notifyListeners();
   }
+
+    void toggleInFavouritedRecipes(Recipe r) {
+    if (!favouritedRecipes.contains(r)) {
+      favouritedRecipes.add(r);
+    }
+    else {
+      favouritedRecipes.remove(r);
+    }
+      notifyListeners();
+  }
 }
+
+
+
+
+
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key});

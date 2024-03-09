@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed Center Alignment of Recipe Card">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed the duplicate recipe bug">
       <change beforePath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-03-03_7_47_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-03-03_7_47_p_m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/web/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +108,7 @@
       <workItem from="1709837774118" duration="1173000" />
       <workItem from="1709873705179" duration="1073000" />
       <workItem from="1709935646258" duration="12485000" />
-      <workItem from="1709968958158" duration="353000" />
+      <workItem from="1709968958158" duration="2814000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -266,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709956220380</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fixed the duplicate recipe bug">
+      <option name="closed" value="true" />
+      <created>1709969369223</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1709969369224</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +305,8 @@
     <MESSAGE value="Added the hashmap for the recipes for the day" />
     <MESSAGE value="Added Working Recipes" />
     <MESSAGE value="Added Basic Recipe Cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Basic Recipe Cards" />
+    <MESSAGE value="Fixed the duplicate recipe bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the duplicate recipe bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
