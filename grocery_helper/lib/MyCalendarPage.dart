@@ -132,7 +132,6 @@ class DayPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
-    var ingredients = myAppState.ingredients;
     return ListView(
       children:[
         ListView.builder(
@@ -156,6 +155,7 @@ class DayPage extends StatelessWidget {
                       myAppState.selectedDay,
                       recipe,
                     );
+                    myAppState.toggleInSavedRecipes(recipe);
                     Navigator.of(context).pop();
                   },
                 );
