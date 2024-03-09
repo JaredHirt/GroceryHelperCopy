@@ -58,7 +58,10 @@ class MyAppState extends ChangeNotifier {
     if(recipesForDay[day] == null){
       recipesForDay[day] = [];
     }
-    recipesForDay[day]!.add(rec);
+    if(!recipesForDay[day]!.contains(rec)) {
+      recipesForDay[day]!.add(rec);
+    }
+    notifyListeners();
   }
 
 

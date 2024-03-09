@@ -35,6 +35,7 @@ import 'package:flutter_timeline_calendar/timeline/widget/select_year.dart';
 import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import 'main.dart';
+import 'recipe.dart';
 
 
 class MyCalendarPage extends StatefulWidget {
@@ -136,11 +137,30 @@ class DayPage extends StatelessWidget {
         ListView.builder(
       shrinkWrap: true,
       physics: const ClampingScrollPhysics(),
-      itemCount: ingredients.length,
-      itemBuilder: (context, index) => ingredients[index]
+      itemCount: myAppState.getRecipesForDay(myAppState.selectedDay).length,
+      itemBuilder: (context, index) => DetailedRecipeCard(recipe:myAppState.getRecipesForDay(myAppState.selectedDay)[index])
     ),
-        Text("Replace Me With Recipe Select Button")
+        ElevatedButton(onPressed: (){
+          for(Recipe r in myAppState.savedRecipes) {
+            myAppState.addRecipeToDay(myAppState.selectedDay, r);
+          }
+        }, child: Text("Add all saved Recipes"))
     ],
     );
+  }
+}
+
+class DetailedRecipeCard extends StatelessWidget {
+  const DetailedRecipeCard({
+    super.key,
+    required this.recipe,
+  });
+
+  final Recipe recipe;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(recipe.title);
   }
 }
