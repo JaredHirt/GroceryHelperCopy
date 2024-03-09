@@ -263,6 +263,13 @@ class _DetailedRecipeCardState extends State<DetailedRecipeCard> {
                     Align(
                       alignment: Alignment.centerLeft,
                         child: Text((i+1).toString() + ". " + widget.recipe.instructions[i] + "\n")),
+                  ElevatedButton(onPressed: (){
+                    setState(() {
+                      myAppState.removeRecipeFromDay(myAppState.selectedDay, widget.recipe);
+                    });
+                  },
+                      child: Text("Remove Recipe")
+                  )
 
                 ],
               ),

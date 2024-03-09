@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed the duplicate recipe bug">
-      <change beforePath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added favourite recipes 🆒🆒🆒">
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/web/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +102,7 @@
       <workItem from="1709837774118" duration="1173000" />
       <workItem from="1709873705179" duration="1073000" />
       <workItem from="1709935646258" duration="12485000" />
-      <workItem from="1709968958158" duration="2814000" />
+      <workItem from="1709968958158" duration="3315000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -268,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709969369224</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added favourite recipes 🆒🆒🆒">
+      <option name="closed" value="true" />
+      <created>1709971983036</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1709971983036</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +308,8 @@
     <MESSAGE value="Added Working Recipes" />
     <MESSAGE value="Added Basic Recipe Cards" />
     <MESSAGE value="Fixed the duplicate recipe bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the duplicate recipe bug" />
+    <MESSAGE value="Added favourite recipes " />
+    <option name="LAST_COMMIT_MESSAGE" value="Added favourite recipes " />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
