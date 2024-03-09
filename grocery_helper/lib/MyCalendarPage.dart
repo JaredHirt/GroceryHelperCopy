@@ -142,10 +142,28 @@ class DayPage extends StatelessWidget {
       itemBuilder: (context, index) => DetailedRecipeCard(recipe:myAppState.getRecipesForDay(myAppState.selectedDay)[index])
     ),
         ElevatedButton(onPressed: (){
-          for(Recipe r in myAppState.savedRecipes) {
-            myAppState.addRecipeToDay(myAppState.selectedDay, r);
-          }
-        }, child: Text("Add all saved Recipes"))
+          showModalBottomSheet(
+          context: context,
+          builder: (BuildContext context) {
+            return ListView.builder(
+              itemCount: myAppState.savedRecipes.length,
+              itemBuilder: (context, index){
+                Recipe recipe = myAppState.savedRecipes[index];
+                return ListTile(
+                  title: Text(recipe.title),
+                  onTap: () {
+                    myAppState.addRecipeToDay(
+                      myAppState.selectedDay,
+                      recipe,
+                    );
+                    Navigator.of(context).pop();
+                  },
+                );
+              },
+          );
+          },
+          );
+        }, child: Text("Add Recipes"))
     ],
     );
   }

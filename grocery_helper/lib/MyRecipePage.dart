@@ -110,5 +110,3 @@ class RecipeCard extends StatelessWidget {
     );
   }
 }
-
-
