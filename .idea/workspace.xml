@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added Working Recipes">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added Basic Recipe Cards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/recipe.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/recipe.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,7 @@
       <workItem from="1709661663428" duration="919000" />
       <workItem from="1709837774118" duration="1173000" />
       <workItem from="1709873705179" duration="1073000" />
-      <workItem from="1709935646258" duration="11575000" />
+      <workItem from="1709935646258" duration="12485000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -245,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709948623383</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added Basic Recipe Cards">
+      <option name="closed" value="true" />
+      <created>1709956220380</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1709956220380</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +287,8 @@
     <MESSAGE value="Modified the Calendar page to actually select the days, and added a nested ListView" />
     <MESSAGE value="Added the hashmap for the recipes for the day" />
     <MESSAGE value="Added Working Recipes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Working Recipes" />
+    <MESSAGE value="Added Basic Recipe Cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Basic Recipe Cards" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

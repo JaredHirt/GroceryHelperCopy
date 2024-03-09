@@ -63,6 +63,15 @@ class MyAppState extends ChangeNotifier {
     }
     notifyListeners();
   }
+  void removeRecipeFromDay(String day, Recipe rec){
+    if(recipesForDay[day] == null){
+      recipesForDay[day] = [];
+    }
+    if(recipesForDay[day]!.contains(rec)) {
+      recipesForDay[day]!.remove(rec);
+    }
+    notifyListeners();
+  }
 
 
   //Shopping List Stuff
