@@ -41,6 +41,7 @@ class _MyRecipePageState extends State<MyRecipePage> {
           children: [
             PageView.builder(
               key: const PageStorageKey('RecipeFinder'),
+              itemCount: myAppState.recipeList.length,
               controller: _controller,
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {

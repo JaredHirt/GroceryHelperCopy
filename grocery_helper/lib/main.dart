@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:collection';
 import 'package:flutter/material.dart';
-import 'package:grocery_helper/recipe.dart';
+import 'recipe.dart';
 import 'package:provider/provider.dart';
 
 import 'MyCalendarPage.dart';
@@ -132,51 +132,17 @@ class MyAppState extends ChangeNotifier {
   //Buffer
   List<Recipe> recipeList = [];
 
-  int recipeIndex = -1;
-  MyAppState(){
-    getFirstRecipe(initializeRecipe());
-  }
-
-  void getFirstRecipe(Future<void> future) async {
-    await future;
-    getNextRecipe();
-  }
-
-  Future<void> initializeRecipe() async {
-    bool newRecipe = false;
-    while(!newRecipe) {
+  Future<void> addRecipesToEndOfList() async{
+    int recipesLeftToAdd = 10;
+    while(recipesLeftToAdd > 0){
       try {
         await fetchRecipe().then((value) =>  recipeList.add(value));
-        newRecipe = true;
-        notifyListeners();
+        recipesLeftToAdd--;
       } on FormatException {print("Failed to get Recipe");}
     }
-     isInitialized = true;
+    print('Recipes Added To End Of List');
+    isInitialized = true;
     notifyListeners();
-  }
-
-
-  void getNextRecipe()  {
-    recipeIndex++;
-    addRecipesToEndOfList();
-    notifyListeners();
-  }
-  void getPreviousRecipe() {
-    if(recipeIndex > 0) {
-      recipeIndex--;
-    }
-    notifyListeners();
-  }
-
-  void addRecipesToEndOfList() async{
-    while(recipeIndex < recipeList.length + 10){
-      try {
-        await fetchRecipe().then((value) =>  recipeList.add(value));
-      } on FormatException {print("Failed to get Recipe");}
-    }
-
-    notifyListeners();
-
   }
 
 
@@ -223,6 +189,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
     if(myAppState.isInitialized == false) {
+
+      myAppState.addRecipesToEndOfList();
       return Scaffold(
         body: Center(
           child: Image.asset(
