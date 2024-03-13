@@ -290,7 +290,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: AspectRatio(
-          aspectRatio: 9/16,
+          aspectRatio: 380/580,
             child: page,
         ),
       ),

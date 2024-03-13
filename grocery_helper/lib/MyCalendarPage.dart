@@ -45,7 +45,7 @@ class MyCalendarPage extends StatefulWidget {
   _MyCalendarPageState createState() => _MyCalendarPageState();
 }
 
-class _MyCalendarPageState extends State<MyCalendarPage> {
+class _MyCalendarPageState extends State<MyCalendarPage>  with AutomaticKeepAliveClientMixin<MyCalendarPage>{
   late CalendarDateTime selectedDateTime;
   late DateTime? weekStart;
   late DateTime? weekEnd;
@@ -67,8 +67,9 @@ class _MyCalendarPageState extends State<MyCalendarPage> {
     @override
     Widget build(BuildContext context) {
       var myAppState = context.watch<MyAppState>();
+      var selectedDay = myAppState.selectedDay;
+      selectedDateTime = CalendarDateTime(year: selectedDay.year, month: selectedDay.month, day: selectedDay.day);
       ThemeData theme = Theme.of(context);
-      myAppState.selectedDay =  selectedDateTime.toDateTime();
 
       return Column(
         children: [
@@ -120,6 +121,9 @@ class _MyCalendarPageState extends State<MyCalendarPage> {
         ],
       );
     }
+
+  @override
+  bool get wantKeepAlive => true;
   }
 
 class DayPage extends StatelessWidget {
