@@ -7,17 +7,28 @@ import 'package:intl/intl.dart';
 import 'recipe.dart';
 import 'package:provider/provider.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 import 'MyCalendarPage.dart';
 import 'MyRecipePage.dart';
 import 'MyShoppingPage.dart';
 
-void main()  => runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
+  runApp(MyApp());
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
+
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
@@ -233,6 +244,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     var myAppState = context.watch<MyAppState>();
     if(myAppState.isInitialized == false) {
+
 
       myAppState.addRecipesToEndOfList();
       return Scaffold(

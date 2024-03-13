@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added favourite recipes 🆒🆒🆒">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed bug where Calendar page would change if the widget was unloaded">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyShoppingPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +124,11 @@
       <workItem from="1710286055995" duration="1088000" />
       <workItem from="1710287364301" duration="819000" />
       <workItem from="1710288222762" duration="6255000" />
+      <workItem from="1710310960006" duration="644000" />
+      <workItem from="1710311723771" duration="1395000" />
+      <workItem from="1710313132870" duration="1295000" />
+      <workItem from="1710314443777" duration="456000" />
+      <workItem from="1710314912560" duration="1409000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -287,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709971983036</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fixed bug where Calendar page would change if the widget was unloaded">
+      <option name="closed" value="true" />
+      <created>1710307663902</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1710307663903</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +344,8 @@
     <MESSAGE value="Fixed the duplicate recipe bug" />
     <MESSAGE value="Added favourite recipes " />
     <MESSAGE value="ADDED DATE SELECTION" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADDED DATE SELECTION" />
+    <MESSAGE value="Fixed bug where Calendar page would change if the widget was unloaded" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where Calendar page would change if the widget was unloaded" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

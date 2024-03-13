@@ -1,40 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 
 //Calendar Import
-import 'package:flutter_timeline_calendar/timeline/dictionaries/dictionary.dart';
-import 'package:flutter_timeline_calendar/timeline/dictionaries/en.dart';
-import 'package:flutter_timeline_calendar/timeline/dictionaries/fa.dart';
-import 'package:flutter_timeline_calendar/timeline/dictionaries/pt.dart';
 import 'package:flutter_timeline_calendar/timeline/flutter_timeline_calendar.dart';
-import 'package:flutter_timeline_calendar/timeline/handlers/calendar_monthly_utils.dart';
-import 'package:flutter_timeline_calendar/timeline/handlers/translator.dart';
-import 'package:flutter_timeline_calendar/timeline/model/calendar_options.dart';
-import 'package:flutter_timeline_calendar/timeline/model/datetime.dart';
 //import 'package:flutter_timeline_calendar/timeline/model/day_options.dart';
-import 'package:flutter_timeline_calendar/timeline/model/headers_options.dart';
-import 'package:flutter_timeline_calendar/timeline/model/select_month_options.dart';
-import 'package:flutter_timeline_calendar/timeline/model/select_year_options.dart';
 //import 'package:flutter_timeline_calendar/timeline/model/selected_day_options.dart';
-import 'package:flutter_timeline_calendar/timeline/provider/calendar_provider.dart';
-import 'package:flutter_timeline_calendar/timeline/provider/gregorian_calendar.dart';
 import 'package:flutter_timeline_calendar/timeline/provider/instance_provider.dart';
-import 'package:flutter_timeline_calendar/timeline/utils/calendar_types.dart';
-import 'package:flutter_timeline_calendar/timeline/utils/calendar_utils.dart';
 import 'package:flutter_timeline_calendar/timeline/utils/datetime_extension.dart';
-import 'package:flutter_timeline_calendar/timeline/utils/style_provider.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/calendar_daily.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/calendar_monthly.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/day.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/header.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/select_day.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/select_month.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/select_year.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import 'main.dart';
 import 'recipe.dart';
@@ -255,8 +229,7 @@ class _DetailedRecipeCardState extends State<DetailedRecipeCard> {
                   child:Column(
                     children: [
                   for(int i = 0; i < widget.recipe.ingredients.length; i++)
-                    if(widget.recipe.ingredients[i] != null)
-                      Text("${widget.recipe.measures[i]} ${widget.recipe.ingredients[i]}"),
+                    Text("${widget.recipe.measures[i]} ${widget.recipe.ingredients[i]}"),
           ],
         ),
               ),
