@@ -289,8 +289,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: page,
+        child: AspectRatio(
+          aspectRatio: 9/16,
+            child: page,
+        ),
       ),
+      backgroundColor: theme.colorScheme.background,
       bottomNavigationBar: NavigationBar(
         labelBehavior: labelBehavior,
         selectedIndex: selectedIndex,
