@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'dart:collection';
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_timeline_calendar/timeline/provider/instance_provider.dart';
 import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:grocery_helper/auth_gate.dart';
 import 'package:intl/intl.dart';
 import 'recipe.dart';
 import 'package:provider/provider.dart';
@@ -15,11 +17,13 @@ import 'MyRecipePage.dart';
 import 'MyShoppingPage.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-  options: DefaultFirebaseOptions.currentPlatform,
-);
-  runApp(MyApp());
+   WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp(
+   options: DefaultFirebaseOptions.currentPlatform,
+ );
+
+
+ runApp(const MyApp());
 }
 
 
@@ -41,7 +45,7 @@ class MyApp extends StatelessWidget {
             onPrimary: const Color.fromRGBO(0, 0, 0, 100),
           ),
         ),
-        home: const MyHomePage(),
+        home: const AuthGate(),
       ),
     );
   }
@@ -237,7 +241,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var pageIndex = 0;
   var selectedIndex = 0;
 
   @override
@@ -260,7 +263,7 @@ class _MyHomePageState extends State<MyHomePage> {
     NavigationDestinationLabelBehavior labelBehavior =
         NavigationDestinationLabelBehavior.onlyShowSelected;
 
-    switch (pageIndex) {
+    switch (selectedIndex) {
       case 0:
         page = const MyRecipePage();
         break;
@@ -270,11 +273,8 @@ class _MyHomePageState extends State<MyHomePage> {
       case 2:
         page = const MyShoppingPage();
         break;
-      case 3:
-        page = const Placeholder();
-        break;
       default:
-        throw UnimplementedError('no widget for $pageIndex');
+        throw UnimplementedError('no widget for $selectedIndex');
     }
 
     return Scaffold(
@@ -285,19 +285,36 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: theme.colorScheme.primary,
         actions: <Widget>[
           IconButton(
-            color: theme.colorScheme.primary,
-            icon: const Icon(Icons.settings),
-            tooltip: 'Settings',
+            icon: const Icon(Icons.person),
             onPressed: () {
-              setState(() {
-                if (pageIndex == 3) {
-                  pageIndex = selectedIndex;
-                } else {
-                  pageIndex = 3;
-                }
-              });
+              Navigator.push(
+                context,
+                MaterialPageRoute<ProfileScreen>(
+                  builder: (context) =>
+                      ProfileScreen(
+                        appBar: AppBar(
+                          title: const Text('User Profile'),
+                        ),
+                        actions: [
+                          SignedOutAction((context) {
+                            Navigator.of(context).pop();
+                          })
+                        ],
+                        children: [
+                          const Divider(),
+                          Padding(
+                            padding: const EdgeInsets.all(2),
+                            child: AspectRatio(
+                              aspectRatio: 1,
+                              child: Image.asset('assets/grocery_logo.png'),
+                            ),
+                          ),
+                        ],
+                      ),
+                ),
+              );
             },
-          ),
+          )
         ],
       ),
       body: Center(
@@ -313,7 +330,6 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: theme.colorScheme.primary,
         onDestinationSelected: (value) {
           setState(() {
-            pageIndex = value;
             selectedIndex = value;
           });
         },

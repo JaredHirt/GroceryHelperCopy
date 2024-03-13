@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Fixed bug where Calendar page would change if the widget was unloaded">
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Forgot to add files to git lol">
+      <change afterPath="$PROJECT_DIR$/grocery_helper/lib/auth_gate.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/ios/Runner/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugins.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Runner/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
@@ -61,6 +66,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.C:/Users/jared/IdeaProjects/GroceryHelper/grocery_helper/android/build.gradle.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
@@ -77,7 +83,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
@@ -94,6 +100,13 @@
       <recent name="C:\Users\Jared\OneDrive - UNBC\Academic Year 2023\Janurary Semester 2024\CPSC 222\Final_Project\GroceryHelper\grocery_helper\lib" />
       <recent name="$PROJECT_DIR$/.idea/src" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-18.0.2-corretto-18.0.2-4caba194b151-5720f15e" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -128,7 +141,8 @@
       <workItem from="1710311723771" duration="1395000" />
       <workItem from="1710313132870" duration="1295000" />
       <workItem from="1710314443777" duration="456000" />
-      <workItem from="1710314912560" duration="1409000" />
+      <workItem from="1710314912560" duration="9730000" />
+      <workItem from="1710325031587" duration="941000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>
@@ -304,7 +318,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710307663903</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added FireBase">
+      <option name="closed" value="true" />
+      <created>1710316334964</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1710316334964</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Forgot to add files to git lol">
+      <option name="closed" value="true" />
+      <created>1710316473363</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1710316473363</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +352,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created File Structure" />
     <MESSAGE value="Added communication between the different widgets" />
     <MESSAGE value="Added some base shopping list functionality" />
     <MESSAGE value="I have partially implemented the Random Recipes, there's a bug where it sometimes throws an error, working on finding the cause of the bug, but we do have a bit of functionality :)" />
@@ -345,7 +374,10 @@
     <MESSAGE value="Added favourite recipes " />
     <MESSAGE value="ADDED DATE SELECTION" />
     <MESSAGE value="Fixed bug where Calendar page would change if the widget was unloaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where Calendar page would change if the widget was unloaded" />
+    <MESSAGE value="Added FireBase" />
+    <MESSAGE value="Sign in options are halfway added, google works for web, but not for android" />
+    <MESSAGE value="Forgot to add files to git lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forgot to add files to git lol" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -78,14 +78,17 @@ class _MyCalendarPageState extends State<MyCalendarPage>  with AutomaticKeepAliv
                 getLatestWeek();
             },
         onDateTimeReset: (resetDateTime) {
+          myAppState.setSelectedDay(resetDateTime.toDateTime());
           selectedDateTime = resetDateTime;
           getLatestWeek();
         },
         onMonthChanged: (monthDateTime) {
+              myAppState.setSelectedDay(monthDateTime.toDateTime());
           selectedDateTime = monthDateTime;
           getLatestWeek();
         },
         onYearChanged: (yearDateTime) {
+              myAppState.setSelectedDay(yearDateTime.toDateTime());
           selectedDateTime = yearDateTime;
           getLatestWeek();
         },
