@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -20,16 +21,34 @@ class _MyShoppingPageState extends State<MyShoppingPage> {
     var myAppState = context.watch<MyAppState>();
     var ingredients = myAppState.ingredients;
 
-    myAppState.addToShoppingList(myAppState.savedRecipes);
+    myAppState.refreshShoppingList();
     return Scaffold(
-        body: ListView.builder(
-          key: const PageStorageKey('Shopping List'),
-          itemCount:ingredients.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ingredients[index];
-        },
-        )
-    );
+      body:Column(
+            children: [
+                ElevatedButton(
+                  child: Text('Select Dates For Shopping'),
+                  onPressed: () async {
+                    DateTime firstDate = DateTime(myAppState.selectedDay.year - 5 );
+                    DateTime lastDate = DateTime(myAppState.selectedDay.year + 5 );
+                    DateTimeRange? range = await showDateRangePicker(context: context, firstDate: firstDate, lastDate: lastDate);
+                    if(range != null){
+                      myAppState.setDateTimeRange(range);
+                    }
+                  },
+              ),
+
+               Expanded(
+                 child: ListView.builder(
+                    key: const PageStorageKey('Shopping List'),
+                    itemCount:ingredients.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return ingredients[index];
+                  },
+                  ),
+               ),
+            ],
+          ),
+        );
   }
 }
 

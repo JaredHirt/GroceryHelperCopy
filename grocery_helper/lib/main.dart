@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'dart:collection';
 import 'package:flutter/material.dart';
+import 'package:flutter_timeline_calendar/timeline/provider/instance_provider.dart';
+import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:intl/intl.dart';
 import 'recipe.dart';
 import 'package:provider/provider.dart';
 
@@ -39,37 +42,59 @@ class MyAppState extends ChangeNotifier {
 
 
   //Calendar Stuff
-  String selectedDay = "";
+  DateTime selectedDay = DateTime.now();
+  DateTimeRange range = DateTimeRange(start: DateTime.now(), end: DateTime.now());
+
+
+  //Gets a list of DateTime in a range
+  List<DateTime> getDaysInBetween(DateTimeRange range) {
+    DateTime startDate = range.start;
+    DateTime endDate = range.end;
+    List<DateTime> days = [];
+    for (int i = 0; i <= endDate.difference(startDate).inDays; i++) {
+      days.add(
+        DateTime(
+          startDate.year,
+          startDate.month,
+          startDate.day + i)
+      );
+    }
+    return days;
+}
 
   Map<String, List<Recipe>> recipesForDay = HashMap();
 
-  void setSelectedDay(String day){
+  String formatDate(DateTime day){
+    return DateFormat('EEEE, MMMM d, y').format(day);
+  }
+
+  void setSelectedDay(DateTime day){
     selectedDay = day;
     notifyListeners();
   }
 
-  List<Recipe> getRecipesForDay(String day){
-    if(recipesForDay[day] == null){
+  List<Recipe> getRecipesForDay(DateTime day){
+    if(recipesForDay[formatDate(day)] == null){
       return [];
     }
-    return recipesForDay[day]!;
+    return recipesForDay[formatDate(day)]!;
   }
 
-  void addRecipeToDay(String day, Recipe rec){
-    if(recipesForDay[day] == null){
-      recipesForDay[day] = [];
+  void addRecipeToDay(DateTime day, Recipe rec){
+    if(recipesForDay[formatDate(day)] == null){
+      recipesForDay[formatDate(day)] = [];
     }
-    if(!recipesForDay[day]!.contains(rec)) {
-      recipesForDay[day]!.add(rec);
+    if(!recipesForDay[formatDate(day)]!.contains(rec)) {
+      recipesForDay[formatDate(day)]!.add(rec);
     }
     notifyListeners();
   }
-  void removeRecipeFromDay(String day, Recipe rec){
-    if(recipesForDay[day] == null){
-      recipesForDay[day] = [];
+  void removeRecipeFromDay(DateTime day, Recipe rec){
+    if(recipesForDay[formatDate(day)] == null){
+      recipesForDay[formatDate(day)] = [];
     }
-    if(recipesForDay[day]!.contains(rec)) {
-      recipesForDay[day]!.remove(rec);
+    if(recipesForDay[formatDate(day)]!.contains(rec)) {
+      recipesForDay[formatDate(day)]!.remove(rec);
     }
     notifyListeners();
   }
@@ -80,11 +105,16 @@ class MyAppState extends ChangeNotifier {
 
 
 
-  void addToShoppingList(List<Recipe> list){
-    for(var rec in list){
-      for(var item in rec.ingredients){
-        if(!containsIngredient(item)){
-          ingredients.add(ItemOnList(ingredient:item, value:false));
+  void refreshShoppingList(){
+    List<DateTime> dates = getDaysInBetween(range);
+    for(var date in dates) {
+      var list = getRecipesForDay(date);
+      for (var rec in list) {
+        for (var item in rec.ingredients) {
+          if (!containsIngredient(item)) {
+            ingredients.add(ItemOnList(
+                key: Key("List Item Key"), ingredient: item, value: false));
+          }
         }
       }
     }
@@ -92,7 +122,7 @@ class MyAppState extends ChangeNotifier {
 
     List<ItemOnList> itemsToRemove = [];
     for(ItemOnList i in ingredients){
-      if(!ingredientUsedInSavedRecipe(i.ingredient)){
+      if(!ingredientUsedInDateRange(i.ingredient)){
         itemsToRemove.add(i);
       }
     }
@@ -115,11 +145,15 @@ class MyAppState extends ChangeNotifier {
     return false;
   }
 
-  bool ingredientUsedInSavedRecipe(String s){
-    for(Recipe rec in savedRecipes){
-      for(String ing in rec.ingredients){
-        if(s == ing){
-          return true;
+  bool ingredientUsedInDateRange(String s) {
+  List<DateTime> dates = getDaysInBetween(range);
+    for (var date in dates) {
+      var list = getRecipesForDay(date);
+      for (Recipe rec in list) {
+        for (String ing in rec.ingredients) {
+          if (s == ing) {
+            return true;
+          }
         }
       }
     }
@@ -132,7 +166,17 @@ class MyAppState extends ChangeNotifier {
   //Buffer
   List<Recipe> recipeList = [];
 
+  setDateTimeRange(DateTimeRange dateRange){
+    range = dateRange;
+    notifyListeners();
+  }
+
+
   Future<void> addRecipesToEndOfList() async{
+    if(isInitialized == false){
+     TimelineCalendar.calendarProvider = createInstance();
+      selectedDay = TimelineCalendar.calendarProvider.getDateTime().toDateTime();
+    }
     int recipesLeftToAdd = 10;
     while(recipesLeftToAdd > 0){
       try {

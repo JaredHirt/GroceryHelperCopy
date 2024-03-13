@@ -45,6 +45,9 @@ class _MyRecipePageState extends State<MyRecipePage> {
               controller: _controller,
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
+                if(myAppState.recipeList.length - 11 < index){
+                  myAppState.addRecipesToEndOfList();
+                }
                 return recipeCards[index];
             },
             ),
@@ -88,8 +91,10 @@ class RecipeCard extends StatelessWidget {
                   children: [
                   Text(recipe.title),
                   CachedNetworkImage(
-                  imageUrl: recipe.thumbnail,
-                  ),
+                    imageUrl: recipe.thumbnail,
+                    placeholder: (context, url) => new CircularProgressIndicator(),
+                    errorWidget: (context, url, error) => new Icon(Icons.error),
+   ),
                   ]
                 )
               ),

@@ -68,8 +68,7 @@ class _MyCalendarPageState extends State<MyCalendarPage> {
     Widget build(BuildContext context) {
       var myAppState = context.watch<MyAppState>();
       ThemeData theme = Theme.of(context);
-      myAppState.selectedDay = (DateFormat('EEEE, MMMM d, y').format(
-                    selectedDateTime.toDateTime()));
+      myAppState.selectedDay =  selectedDateTime.toDateTime();
 
       return Column(
         children: [
@@ -99,9 +98,7 @@ class _MyCalendarPageState extends State<MyCalendarPage> {
               headerTextColor: Colors.black,
             ),
           onChangeDateTime: (datetime) {
-                String selectedDayText = DateFormat('EEEE, MMMM d, y').format(
-                    datetime.toDateTime());
-                myAppState.setSelectedDay(selectedDayText);
+                myAppState.setSelectedDay(datetime.toDateTime());
                 selectedDateTime = datetime;
                 getLatestWeek();
             },
