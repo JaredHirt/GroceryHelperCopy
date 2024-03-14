@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GroupProjectCode.iml" filepath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/grocery_helper/grocery_helper.iml" filepath="$PROJECT_DIR$/grocery_helper/grocery_helper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/grocery_helper/android/grocery_helper_android.iml" filepath="$PROJECT_DIR$/grocery_helper/android/grocery_helper_android.iml" />
     </modules>
   </component>
 </project>

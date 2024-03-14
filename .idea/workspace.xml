@@ -4,18 +4,29 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Forgot to add files to git lol">
-      <change afterPath="$PROJECT_DIR$/grocery_helper/lib/auth_gate.dart" afterDir="false" />
+    <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added Aspect Ratio">
+      <change afterPath="$PROJECT_DIR$/grocery_helper/android/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grocery_helper/android/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyCalendarPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/.metadata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/database.rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/database.rules.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/firestore.indexes.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/firestore.indexes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/firestore.rules" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/firestore.rules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/firebase_options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/firebase_options.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugins.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugins.cmake" afterDir="false" />
@@ -74,25 +85,27 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Jared-Shennanigans-Part-2&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jared/flutter&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/app&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin.scripting&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jared\IdeaProjects\GroceryHelper\grocery_helper\android\app" />
+      <recent name="C:\Users\Jared\IdeaProjects\GroceryHelper\grocery_helper\android" />
       <recent name="$PROJECT_DIR$/grocery_helper/assets" />
       <recent name="$PROJECT_DIR$/grocery_helper/lib" />
     </key>
@@ -100,6 +113,117 @@
       <recent name="C:\Users\Jared\OneDrive - UNBC\Academic Year 2023\Janurary Semester 2024\CPSC 222\Final_Project\GroceryHelper\grocery_helper\lib" />
       <recent name="$PROJECT_DIR$/.idea/src" />
     </key>
+  </component>
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/app/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/grocery_helper/android/app/build.gradle" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/build.gradle (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/grocery_helper/android/build.gradle" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/build.gradle (2)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/grocery_helper/android/build.gradle" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/grocery_helper/android/build.gradle" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/app/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/grocery_helper/app/build.gradle" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/build.gradle (2)" />
+        <item itemvalue="Gradle.C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/app/build.gradle" />
+        <item itemvalue="Gradle.C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/build.gradle (1)" />
+        <item itemvalue="Gradle.C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/app/build.gradle" />
+        <item itemvalue="Gradle.C:/Users/Jared/IdeaProjects/GroceryHelper/grocery_helper/android/build.gradle" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -143,6 +267,16 @@
       <workItem from="1710314443777" duration="456000" />
       <workItem from="1710314912560" duration="9730000" />
       <workItem from="1710325031587" duration="941000" />
+      <workItem from="1710360466889" duration="475000" />
+      <workItem from="1710361144746" duration="2314000" />
+      <workItem from="1710365733195" duration="1124000" />
+      <workItem from="1710367033775" duration="1992000" />
+      <workItem from="1710370162250" duration="2118000" />
+      <workItem from="1710372789496" duration="1291000" />
+      <workItem from="1710374741910" duration="607000" />
+      <workItem from="1710375373767" duration="3842000" />
+      <workItem from="1710383798842" duration="1287000" />
+      <workItem from="1710388347699" duration="852000" />
     </task>
     <task id="LOCAL-00001" summary="Created File Structure">
       <created>1708134507471</created>

@@ -323,7 +323,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: page,
         ),
       ),
-      backgroundColor: theme.colorScheme.background,
+      backgroundColor: theme.colorScheme.surface,
       bottomNavigationBar: NavigationBar(
         labelBehavior: labelBehavior,
         selectedIndex: selectedIndex,

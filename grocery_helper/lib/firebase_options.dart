@@ -70,6 +70,8 @@ class DefaultFirebaseOptions {
     projectId: 'grocery-helper-e7d24',
     databaseURL: 'https://grocery-helper-e7d24-default-rtdb.firebaseio.com',
     storageBucket: 'grocery-helper-e7d24.appspot.com',
+    androidClientId: '8673329015-951ph2fd0c7d85fhf6tnmllnks8kp0a4.apps.googleusercontent.com',
+    iosClientId: '8673329015-t0q6aemlvr699jav57c5mmv4c125f97u.apps.googleusercontent.com',
     iosBundleId: 'com.example.groceryHelper',
   );
 
@@ -80,6 +82,8 @@ class DefaultFirebaseOptions {
     projectId: 'grocery-helper-e7d24',
     databaseURL: 'https://grocery-helper-e7d24-default-rtdb.firebaseio.com',
     storageBucket: 'grocery-helper-e7d24.appspot.com',
+    androidClientId: '8673329015-951ph2fd0c7d85fhf6tnmllnks8kp0a4.apps.googleusercontent.com',
+    iosClientId: '8673329015-pvc26v51qi51jl2uu4294fujcq8ukuf2.apps.googleusercontent.com',
     iosBundleId: 'com.example.groceryHelper.RunnerTests',
   );
 }

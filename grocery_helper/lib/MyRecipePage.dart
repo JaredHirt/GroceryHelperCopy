@@ -80,7 +80,7 @@ class RecipeCard extends StatelessWidget {
 
 
     return Scaffold(
-      backgroundColor: theme.colorScheme.background,
+      backgroundColor: theme.colorScheme.surface,
       body: Center(
         child: Stack(
           children: [

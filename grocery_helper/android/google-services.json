@@ -1,0 +1,48 @@
+
+{
+  "project_info": {
+    "project_number": "8673329015",
+    "firebase_url": "https://grocery-helper-e7d24-default-rtdb.firebaseio.com",
+    "project_id": "grocery-helper-e7d24",
+    "storage_bucket": "grocery-helper-e7d24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8673329015:android:358e9f51c8856677436b72",
+        "android_client_info": {
+          "package_name": "com.example.grocery_helper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8673329015-emic5h9nje78b4fbhpc26ca9e6a3kr9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiKotM2szdejxSw19AAVAjq4KE5XWWSq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8673329015-emic5h9nje78b4fbhpc26ca9e6a3kr9l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "8673329015-pvc26v51qi51jl2uu4294fujcq8ukuf2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.groceryHelper.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
