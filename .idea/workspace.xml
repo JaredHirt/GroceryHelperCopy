@@ -5,30 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="569a6c2f-de33-419d-8b0a-8c867a960150" name="Changes" comment="Added Aspect Ratio">
-      <change afterPath="$PROJECT_DIR$/grocery_helper/android/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grocery_helper/android/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupProjectCode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/.metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/database.rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/database.rules.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/firestore.indexes.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/firestore.indexes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/firestore.rules" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/firestore.rules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/MyRecipePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/firebase_options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/firebase_options.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/linux/flutter/generated_plugins.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/grocery_helper/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
